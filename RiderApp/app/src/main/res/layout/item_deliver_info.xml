@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="010-0000-0000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/addressStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNum"
+            android:layout_marginTop="10dp"
+            android:text="도로명 주소"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressStreet"
+            android:layout_marginTop="10dp"
+            android:text="주소"
+            android:textSize="16sp" />
+
+
+        
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/address"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:id="@+id/naviContainer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/ic_navi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="길찾기" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/callContainer"
+                android:layout_width="0dp"
+                android:layout_weight="1"                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/naviContainer"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="통화" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    
+</android.support.v7.widget.CardView>
